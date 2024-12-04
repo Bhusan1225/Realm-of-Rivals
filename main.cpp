@@ -103,6 +103,7 @@ public:
 int main() 
 {
 	player* player1 = new player();
+	player* enemy = new player();
 	Zharith* Zhar = new Zharith();
 	
 
@@ -119,17 +120,17 @@ int main()
 
 	
 	//player base damage
-	player1->p_basicDamage(player1->health);
-	player1->p_basicDamage(player1->health);
-	player1->p_basicDamage(player1->health);
-	player1->p_basicDamage(player1->health);
+	player1->p_basicDamage(player1->baseDamage, player1->health);
+	player1->p_basicDamage(player1->baseDamage, player1->health);
+	player1->p_basicDamage(player1->baseDamage, player1->health);
+	player1->p_basicDamage(player1->baseDamage, player1->health);
 	
 	
 	
 
 
 	//player addition damage
-	player1->p_additionDamage(player1->minAdditionalDamage, player1->maxAdditionDamage, player1->health);
+	player1->SurpriseMove(player1->min_S_Damage, player1->max_S_Damage, player1->health);
 
 	
 
@@ -137,6 +138,7 @@ int main()
 	//player heal 
 	player1->p_heal(player1->minHeal, player1->maxHeal, player1->health);
 	
+	player1->attack(*enemy);
 
 	delete Zhar;     // Freeing memory for the Zharith object
 	delete player1;  // Freeing memory for the player object

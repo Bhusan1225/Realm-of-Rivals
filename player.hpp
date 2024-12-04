@@ -5,16 +5,33 @@ public:
 	string p_name;
 	int health = 100;
 	int baseDamage = 20;
+	int attackDamage = 20;
 	
 	
 	int minHeal = 10;
 	int maxHeal = 60;
 
-	int minAdditionalDamage = 1;
-	int maxAdditionDamage= 5;
+	int min_S_Damage = 10;
+	int max_S_Damage= 20;
 	
+	player()
+	{
+		p_name = "harry";
 
-	int p_basicDamage( int& health)
+	}
+
+	int attack(player & target)
+	{
+		//attack logic
+		target.p_basicDamage(target.attackDamage, target.health);
+
+		cout << "Enemy health After taking damage: " << target.health<<endl;
+
+		return target.health;
+	}
+
+
+	int p_basicDamage(int baseDamage, int & health)
 	{
 		if (health- baseDamage < 0)
 		{
@@ -27,42 +44,35 @@ public:
 		
 		//cout << "health inside base:"<< health << endl;
 		cout << "health after base damame:" << health << endl << endl;
-		return 0;
+		return health;
 		
 	}
 
+	
 
 
-
-	player()
-	{
-		p_name = "harry";
-		
-	}
-
-
-	int p_additionDamage(int & minAdditionalDamage, int & maxAdditionDamage, int& health)
+	int SurpriseMove(int min_S_Damage, int max_S_Damage, int&health)
 	{
 		
 		srand(static_cast<unsigned>(time(0))); // Seed random generator
-		int additionalDamage = minAdditionalDamage + rand() % (maxAdditionDamage - minAdditionalDamage + 1); //formula for random no. generation 
+		int surpriseDamage = min_S_Damage + rand() % (max_S_Damage - min_S_Damage + 1); //formula for random no. generation 
 		
 		
-		if (health - additionalDamage < 0)
+		if (health - surpriseDamage < 0)
 		{
 			health = 0;
 		}
 		else
 		{
-			health -= additionalDamage;
+			health -= surpriseDamage;
 		}
 
-		cout << "health after aditional damage:" << health << endl;
+		cout << "health after Surprise Move:" << health << endl;
 		return health;
 
 	}
 
-	int p_heal(int& minHeal, int& maxHeal , int& health)
+	int p_heal(int minheal,int maxheal, int&health)
 	{
 		
 		
