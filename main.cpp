@@ -1,11 +1,7 @@
 #include <iostream>
-
 using namespace std;
 
-#include "player.hpp"
-
-
-
+#include  "player.hpp"
 enum class warrior
 {
 	Guardian, 
@@ -15,12 +11,11 @@ enum class warrior
 
 
 
-
-
-
 class Zharith
 {
 public:
+
+	int option = 0;
 	Zharith()
 	{
 		cout << "I am Zharith, the Eternal Chronicler." << endl;
@@ -117,11 +112,31 @@ int main()
 	player1->p_name;
 	Zhar->PlayerIntro(player1->p_name);
 	
-	int option = 0 ;
 	
-	Zhar->optionWarrior(option, player1->p_name);
+	
+	Zhar->optionWarrior(Zhar->option, player1->p_name);
 
 
+	
+	//player base damage
+	player1->p_basicDamage(player1->health);
+	player1->p_basicDamage(player1->health);
+	player1->p_basicDamage(player1->health);
+	player1->p_basicDamage(player1->health);
+	
+	
+	
+
+
+	//player addition damage
+	player1->p_additionDamage(player1->minAdditionalDamage, player1->maxAdditionDamage, player1->health);
+
+	
+
+	
+	//player heal 
+	player1->p_heal(player1->minHeal, player1->maxHeal, player1->health);
+	
 
 	delete Zhar;     // Freeing memory for the Zharith object
 	delete player1;  // Freeing memory for the player object
