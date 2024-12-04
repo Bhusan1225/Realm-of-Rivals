@@ -16,12 +16,12 @@ class player
 {
 public:
 	 
-	string *p_name;
+	string p_name;
 
 
 	player()
 	{
-		p_name = new string("Harry");
+		p_name ="harry";// = new string("Harry");
 	}
 
 };
@@ -44,7 +44,7 @@ public:
 		cout << "Ah,"  << pl_name <<", a name worthy of the Arena.\nThe Eternal Chronicler welcomes you.\nYour journey begins now, but remember—only the strongest will carve their name into the Codex.\nWill you rise... or fade into legend?\n\n";
 			
 	}
-	void optionWarrior(int &option, string &p_name)
+	void optionWarrior(int option, string &p_name)
 	{
 		cout<<"You have 3 options to choose the worriers.\n\n"<<
 			"Option 1: The Guardian\n"
@@ -122,12 +122,12 @@ int main()
 
 	Zhar ->AltheriaIntro();
 	cout << "Tell me, warrior, what name shall echo in the Codex of Rivals?" << endl;
-	cout<< *player1->p_name<<endl;
-	Zhar->PlayerIntro(*player1->p_name);
+	cout<< player1->p_name<<endl;
+	Zhar->PlayerIntro(player1->p_name);
 	
-	int option =0 ;
+	int option = 0 ;
 	
-	Zhar->optionWarrior(option, *player1->p_name);
+	Zhar->optionWarrior(option, player1->p_name);
 
 
 
