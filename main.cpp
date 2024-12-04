@@ -1,5 +1,9 @@
 #include <iostream>
+
 using namespace std;
+
+#include "player.hpp"
+
 
 
 enum class warrior
@@ -12,19 +16,7 @@ enum class warrior
 
 
 
-class player
-{
-public:
-	 
-	string p_name;
 
-
-	player()
-	{
-		p_name ="harry";// = new string("Harry");
-	}
-
-};
 
 class Zharith
 {
@@ -122,7 +114,7 @@ int main()
 
 	Zhar ->AltheriaIntro();
 	cout << "Tell me, warrior, what name shall echo in the Codex of Rivals?" << endl;
-	cout<< player1->p_name<<endl;
+	player1->p_name;
 	Zhar->PlayerIntro(player1->p_name);
 	
 	int option = 0 ;
