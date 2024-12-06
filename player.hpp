@@ -2,7 +2,7 @@ class player
 {
 public:
 
-	string name;
+	string p_name = "harry";
 	int health = 100;
 	int baseDamage = 20;
 	int attackDamage = 20;
