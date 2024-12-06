@@ -29,5 +29,8 @@
     <ClInclude Include="Zharith.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="warrior.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

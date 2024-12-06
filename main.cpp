@@ -1,20 +1,9 @@
 using namespace std;
 
 #include <iostream>
-#include  "player.hpp"
+//#include  "player.hpp"
 #include "Zharith.hpp"
 #include "GameManager.cpp"
-
-
-
-enum class warrior
-{
-	Guardian,
-	Sentinel,
-	Slayer
-};
-
-
 
 
 
@@ -36,15 +25,16 @@ int main()
 	Zhar->PlayerIntro(player1->p_name);
 
 
-
+	//charecter selection
 	Zhar->optionWarrior(Zhar->option);
-	game->chooseWarrior(Zhar->option, player1->p_name);
+	game->chooseWarrior(game->option );
+	
+	//battlebegins(const string & p_name, player & selected, player & target)
+	//game->battlebegins(guardian);
 
-
-
+	//cout << " great +++++++++++++++++++++++++++++++++++++++\n";
+	
 	//player base damage
-	player1->takeDamage(player1->takenDamage, player1->health);
-	player1->takeDamage(player1->takenDamage, player1->health);
 	player1->takeDamage(player1->takenDamage, player1->health);
 	player1->takeDamage(player1->takenDamage, player1->health);
 

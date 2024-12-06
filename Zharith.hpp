@@ -26,9 +26,6 @@ public:
 			"Option 1: The Guardian\n"
 			"Option 2: The sentinel\n"
 			"Option 3: The Slyer\n";
-
-
-		cin >> option;
 		
 	}
 };
