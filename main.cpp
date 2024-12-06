@@ -1,9 +1,11 @@
+using namespace std;
+
 #include <iostream>
 #include  "player.hpp"
 #include "Zharith.hpp"
 #include "GameManager.cpp"
 
-using namespace std;
+
 
 enum class warrior
 {
@@ -30,21 +32,21 @@ int main()
 
 	Zhar->AltheriaIntro();
 	cout << "Tell me, warrior, what name shall echo in the Codex of Rivals?" << endl;
-	player1->name;
-	Zhar->PlayerIntro(player1->name);
+	player1->p_name;
+	Zhar->PlayerIntro(player1->p_name);
 
 
 
 	Zhar->optionWarrior(Zhar->option);
-	game->chooseWarrior(Zhar->option, player1->name);
+	game->chooseWarrior(Zhar->option, player1->p_name);
 
 
 
 	//player base damage
-	player1->takeDamage(player1->baseDamage, player1->health);
-	player1->takeDamage(player1->baseDamage, player1->health);
-	player1->takeDamage(player1->baseDamage, player1->health);
-	player1->takeDamage(player1->baseDamage, player1->health);
+	player1->takeDamage(player1->takenDamage, player1->health);
+	player1->takeDamage(player1->takenDamage, player1->health);
+	player1->takeDamage(player1->takenDamage, player1->health);
+	player1->takeDamage(player1->takenDamage, player1->health);
 
 
 

@@ -1,10 +1,12 @@
+
+
 class player
 {
 public:
 
-	string p_name = "harry";
+	string p_name;
 	int health = 100;
-	int baseDamage = 20;
+	int takenDamage = 20;
 	int attackDamage = 20;
 	
 	
@@ -16,7 +18,7 @@ public:
 	
 	player()
 	{
-		name = "harry";
+		p_name = "harry";
 
 	}
 
