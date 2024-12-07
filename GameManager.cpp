@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-#include "player.hpp"
+#include "warriors.hpp"
 
 
 
