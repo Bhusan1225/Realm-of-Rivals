@@ -1,33 +1,40 @@
 #include <iostream>
-
-#include "warriors.hpp"
+#include "worriers.hpp"
 using namespace std;
 
-warriors::warriors()
+worriers::worriers()
 {
-	p_name = "harry";
-
+	cout << " the worrier" << endl;
 }
+//worriers::worriers(string n, int h, int a)
+//{
+//	n = name;
+//	h = health;
+//	a = attackPower;
+//}
 
- int warriors:: attack(warriors& target)
+
+//attack , /take damage, / super attack, / heal four option player have 
+ int worriers:: attack(worriers& target)
 {
 	//attack logic
-	target.takeDamage(target.attackDamage, target.health);
+	target.takeDamage(target.attackPower);
 
 	cout << "Enemy health After taking damage: " << target.health << endl;
 
 	return target.health;
-}
+}						
+ //why warries &target?
 
- int warriors:: takeDamage(int baseDamage, int& health)
+ int worriers:: takeDamage(int Damage)
  {
-	 if (health - baseDamage < 0)
+	 if (health - Damage < 0)
 	 {
 		 health = 0;
 	 }
 	 else
 	 {
-		 health -= baseDamage;
+		 health -= Damage;
 	 }
 
 	 //cout << "health inside base:"<< health << endl;
@@ -36,7 +43,7 @@ warriors::warriors()
 
  }
 
- int warriors::SurpriseMove(int min_S_Damage, int max_S_Damage, warriors& target)
+ int worriers::SurpriseMove(int min_S_Damage, int max_S_Damage, worriers& target)
  {
 
 	 srand(static_cast<unsigned>(time(0))); // Seed random generator
@@ -57,7 +64,7 @@ warriors::warriors()
 
  }
 
- int warriors::heal(int minheal, int maxheal, int& health)
+ int worriers::heal(int minheal, int maxheal, int& health)
  {
 
 
@@ -84,4 +91,18 @@ warriors::warriors()
 
 	 return health;
 
+ }
+
+
+ //added
+ bool worriers::isAlive() {
+	 return health > 0;
+ }
+
+ string worriers:: getName() {
+	 return name;
+ }
+
+ int worriers::getHealth() {
+	 return health;
  }

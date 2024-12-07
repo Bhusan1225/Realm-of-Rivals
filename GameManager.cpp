@@ -1,87 +1,54 @@
+
 #include <iostream>
 using namespace std;
-#include "warriors.hpp"
 
 
+#include "GameManager.hpp"
 
-enum class warrior
-{
-	Guardian =1,
-	Sentinel,
-	Slayer
-};
-
-
-
-class gameManager {
-public:
-	int option= 0;
 	
-	
-	gameManager() 
+	gameManager::gameManager()
 	{
 		cout << "*******************************************Lets start the battle.***************************************" << endl;
 	}
 
 
-	void chooseWarrior(int & option)
-	{
-		bool selectplayer = false;
-		
+	worriers* gameManager::chooseCharacter() {
+		int choice;
 
-		while (selectplayer ==false )
-		{
+		cout << "Choose your character:" << endl;
+		cout << "1. Guardian\n2. Sentinel\n3. Slayer\n";
+		cin >> choice;
 
-			cin >> option;
-			switch (option)
-			{
-			case 1:// The Guardian introduction
-
-				
-				cout << "You have chosen the Guardian,Enduring strength, unbreakable defense, steady." << endl;
-				selectplayer = true;
-				break;
-
-			case 2:
-				// The Sentinel introduction
-
-				
-				cout << "You have chosen the Sentinel, balanced, adaptable, masters no specialty." << endl;
-				selectplayer = true;
-				break;
-
-			case 3:
-				// The Slayer introduction
-
-
-				cout << "You have chosen the Slayer, High damage, fast, but fragile." << endl;
-				selectplayer = true;
-				break;
-
-			default:
-				cout << "Invalid choice. Please select a valid character type." << endl;
-				
-				break;
-			}
+		switch (choice) {
+		case 1:
+			return new Guardian();
+		case 2:
+			return new sentinel();
+		case 3:
+			return new Slayer();
+		default:
+			cout << "Invalid choice, choosing Guardian by default." << endl;
+			return new Guardian();
 		}
-		
-
 	}
 
-	void battlebegins(const string& p_name,player& selected, player& target)
+
+	
+
+	void gameManager::battlebegins(worriers& selected, worriers& target)
 	{
 		cout << "The Arena gates creak open, and the crowd's roar fills the air.\nAcross from you, your rival stands, eyes burning with fierce ambition. Every heartbeat echoes in your chest.\nThere's no turning back now.Prepare yourself—the battle begins!\n";
-		cout << "Are you ready " << p_name << "?" << endl;
+		
 
 		battleloop(selected,target);
 
 	}
 
-	void battleloop(player& selected, player& target)
+	void gameManager::battleloop(worriers& selected, worriers& target)
 	{
 		//battle loop logic
 
 	}
-};
+
 
 

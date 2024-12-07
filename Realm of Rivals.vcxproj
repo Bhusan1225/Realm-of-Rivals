@@ -128,11 +128,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="Guardian.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="warriors.cpp" />
+    <ClCompile Include="sentinel.cpp" />
+    <ClCompile Include="Slayer.cpp" />
+    <ClCompile Include="worriers.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="warriors.hpp" />
+    <ClInclude Include="GameManager.hpp" />
+    <ClInclude Include="Guardian.h" />
+    <ClInclude Include="sentinel.h" />
+    <ClInclude Include="Slayer.h" />
+    <ClInclude Include="worriers.hpp" />
     <ClInclude Include="Zharith.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
