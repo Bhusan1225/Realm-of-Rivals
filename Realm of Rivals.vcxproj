@@ -133,6 +133,7 @@
     <ClCompile Include="sentinel.cpp" />
     <ClCompile Include="Slayer.cpp" />
     <ClCompile Include="worriers.cpp" />
+    <ClCompile Include="Zharith.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.hpp" />

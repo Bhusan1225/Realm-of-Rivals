@@ -14,25 +14,26 @@ enum class warrior
 
 int main()
 {
-	
-	
-	
-	worriers* worriers1 = new worriers();
 	Zharith* Zhar = new Zharith();
-	gameManager* game = new gameManager();
-
-
 
 	Zhar->AltheriaIntro();
 	cout << "Tell me, warrior, what name shall echo in the Codex of Rivals?" << endl;
-	//worriers1->name;
-	//Zhar->PlayerIntro(worriers1->name);
-
-
-	//charecter selection
-	Zhar->optionWarrior(Zhar->option);
+	gameManager manager;
+	worriers* worriers1 = manager.chooseCharacter();
 	
-	//game ->
+	
+	
+	
+	
+
+
+
+	
+
+
+
+	
+	
 	
 	cout << "+++++++++++++++++end of the code++++++++++++++++++"<< endl;
 	delete Zhar;     // Freeing memory for the Zharith object

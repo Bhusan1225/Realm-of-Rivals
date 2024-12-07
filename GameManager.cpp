@@ -14,8 +14,8 @@ using namespace std;
 
 	worriers* gameManager::chooseCharacter() {
 		int choice;
-
-		cout << "Choose your character:" << endl;
+		cout << "I Zharith, can give you 3 options, so choose your worriers wisely.\n\n";
+		
 		cout << "1. Guardian\n2. Sentinel\n3. Slayer\n";
 		cin >> choice;
 
